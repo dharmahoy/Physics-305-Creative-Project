@@ -6,7 +6,9 @@ Get Data
 
 This program loads the data into a data frame, normalizes it,
 then creates a csv of the data so it is easily imported into 
-other programs in this project.
+other programs in this project. This program also narrows down
+the columns in the data set. The columns that aren't used are
+the ones that are ID values that are not object ID.
 The data used is from kaggle. It consists of observations of 
 space taken by the Sloan Digital Sky Survey and can be found 
 at the link below.
@@ -17,12 +19,15 @@ import pandas as pd
 # read data
 stars = pd.read_csv("data/star_classification.csv")
 
-# normalized the data 
-colToNorm = ['alpha', 'delta', 'u', 'g', 'r', 'i', 'z', 'run_ID', \
-'rerun_ID', 'cam_col', 'filed_ID', 'spec_obj_ID', 'redshift', 'plate', \
-'MJD', 'fiber_ID']
+# narrow down columns
+stars = pd.DataFrame(stars[['obj_ID', 'alpha', 'delta', 'u', 'g', 'r', 'i', 'z', \
+'class', 'redshift', 'MJD']])
 
-stars[colToNorm] = stars[colToNorm].apply(lambda x: x-x.min())/(x.max()-x.min())
+# normalized the data 
+colToNorm = ['alpha', 'delta', 'u', 'g', 'r', 'i', 'z', 'redshift', 'MJD']
+
+for col in colToNorm:
+  stars[col] = ((stars[col]-stars[col].min()) / (stars[col].max()-stars[col].min()))
 
 # write a csv file of the normalized data
-stars.to_csv("data/stars.csv")
+stars.to_csv("data/normalized_star_classification.csv")

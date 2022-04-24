@@ -23,6 +23,9 @@ stars = pd.read_csv("data/star_classification.csv")
 stars = pd.DataFrame(stars[['obj_ID', 'alpha', 'delta', 'u', 'g', 'r', 'i', 'z', \
 'class', 'redshift', 'MJD']])
 
+# write a csv of the narrowed down dataset
+stars.to_csv("data/smaller_star_classification.csv")
+
 # normalized the data 
 colToNorm = ['alpha', 'delta', 'u', 'g', 'r', 'i', 'z', 'redshift', 'MJD']
 

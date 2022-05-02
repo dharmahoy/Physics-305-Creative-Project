@@ -88,4 +88,4 @@ Trial 3 accuracy: 0.9233
 Trial 4 accuracy: 0.9233
 '''
 
-# the accuracy decreses when the trials were doubled
+# the accuracy decreses when the neighbors were doubled

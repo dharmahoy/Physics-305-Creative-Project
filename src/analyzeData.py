@@ -34,7 +34,7 @@ dtype: int64
 
 # create a bar chart of the different classes
 fig, ax = plt.subplots()
-plt.bar(['Galaxy', 'Qasar', 'Star'], [59445, 18961, 21594], color = 'dodgerblue')
+plt.bar(['Galaxy', 'Quasar', 'Star'], [59445, 18961, 21594], color = 'dodgerblue')
 plt.title("Counts of Each Class")
 plt.xlabel("Class")
 plt.ylabel("Count")

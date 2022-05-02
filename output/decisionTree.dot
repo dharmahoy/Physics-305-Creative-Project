@@ -1,0 +1,33 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label="redshift <= 0.002\ngini = 0.564\nsamples = 80000\nvalue = [47594, 15126, 17280]\nclass = Galaxy", fillcolor="#f2c29f"] ;
+1 [label="redshift <= 0.002\ngini = 0.045\nsamples = 17689\nvalue = [407, 2, 17280]\nclass = Quasar", fillcolor="#843ee6"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="i <= 0.562\ngini = 0.043\nsamples = 17594\nvalue = [384, 1, 17209]\nclass = Quasar", fillcolor="#843de6"] ;
+1 -> 2 ;
+3 [label="gini = 0.04\nsamples = 17490\nvalue = [359, 1, 17130]\nclass = Quasar", fillcolor="#843de6"] ;
+2 -> 3 ;
+4 [label="gini = 0.365\nsamples = 104\nvalue = [25, 0, 79]\nclass = Quasar", fillcolor="#a978ed"] ;
+2 -> 4 ;
+5 [label="g <= 0.999\ngini = 0.383\nsamples = 95\nvalue = [23, 1, 71]\nclass = Quasar", fillcolor="#ab7bee"] ;
+1 -> 5 ;
+6 [label="gini = 0.245\nsamples = 14\nvalue = [12, 0, 2]\nclass = Galaxy", fillcolor="#e9965a"] ;
+5 -> 6 ;
+7 [label="gini = 0.256\nsamples = 81\nvalue = [11, 1, 69]\nclass = Quasar", fillcolor="#975be9"] ;
+5 -> 7 ;
+8 [label="redshift <= 0.144\ngini = 0.368\nsamples = 62311\nvalue = [47187, 15124, 0]\nclass = Galaxy", fillcolor="#eda978"] ;
+0 -> 8 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+9 [label="redshift <= 0.102\ngini = 0.117\nsamples = 49560\nvalue = [46481, 3079, 0]\nclass = Galaxy", fillcolor="#e78946"] ;
+8 -> 9 ;
+10 [label="gini = 0.07\nsamples = 42413\nvalue = [40873, 1540, 0]\nclass = Galaxy", fillcolor="#e68640"] ;
+9 -> 10 ;
+11 [label="gini = 0.338\nsamples = 7147\nvalue = [5608, 1539, 0]\nclass = Galaxy", fillcolor="#eca46f"] ;
+9 -> 11 ;
+12 [label="g <= 0.999\ngini = 0.105\nsamples = 12751\nvalue = [706, 12045, 0]\nclass = Star", fillcolor="#45e788"] ;
+8 -> 12 ;
+13 [label="gini = 0.035\nsamples = 11537\nvalue = [207, 11330, 0]\nclass = Star", fillcolor="#3de583"] ;
+12 -> 13 ;
+14 [label="gini = 0.484\nsamples = 1214\nvalue = [499, 715, 0]\nclass = Star", fillcolor="#c3f7d9"] ;
+12 -> 14 ;
+}

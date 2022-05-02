@@ -51,7 +51,7 @@ fn = ['alpha', 'delta', 'u', 'g', 'r', 'i', 'z', \
 cn = ['GALAXY', 'QSR', 'STAR']
 
 fig, axes = plt.subplots(nrows = 1,ncols = 1,figsize = (4,4), dpi=300)
-tree.plot_tree(decisionTree.estimators_[42,0],feature_names = fn, \
+tree.plot_tree(decisionTree.estimators_[10,0],feature_names = fn, \
 class_names=cn,filled = True, proportion = True)
 fig.savefig('output/boostedDecisonTree10.png')
 
